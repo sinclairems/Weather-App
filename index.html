@@ -4,107 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/styles.css">
-    <link rel="stylesheet" href="assets/jass.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>Weather Dashboard</title>
 </head>
 <body>
 
-    <header>
-        Weather Dashboard
-    </header>
+<header id="dash">Weather Dashboard</header>
 
-    <div class="container">
-    <!-- Content here -->
-        <div class="row">
-            <div class="col-4">
-                
-            </div>
-
-        </div>
-        <!--
-        Options: I could make this a separate column in a fixed position
-        OR I could make the whole page a grid with two columns 
-            - one for the Search aside
-            - one for the rest of the content (which will contain the other 5 day forecast grid)
-                -->
-        <nav class="navbar navbar-light bg-light">
-            <div class="container-fluid">
-                <h1>Search for a City:</h1>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Austin" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-            </div>
-        </nav>
-    </aside>
-    </div>
-
-    <!-- This container is for the current day, current city -->
-    <div class="container border border-dark my-3 p-5" id="currentSelection">
-        <h1 id="city day-0">Kyle (today's date)</h1>
-        <p id="temp">Temp:</p>
-        <p id="wind">Wind:</p>
-        <p id="humidity">Humidity:</p>
-    </div>
-
-    <!--This container is for the 5-Day Forecast-->
-    <div class="container">
-        <h2>5-Day Forecast</h2>
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 mb-5">
-            <div class="col">
-                <div class="card">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item" id="day-1"><strong>DATE</strong></li>
-                        <li class="list-group-item" id="tempDay1">TEMP:</li>
-                        <li class="list-group-item" id="windDay1">WIND:</li>
-                        <li class="list-group-item" id="humidityDay1">HUMIDITY:</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item" id="day-1"><strong>DATE</strong></li>
-                        <li class="list-group-item" id="tempDay1">TEMP:</li>
-                        <li class="list-group-item" id="windDay1">WIND:</li>
-                        <li class="list-group-item" id="humidityDay1">HUMIDITY:</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item" id="day-1"><strong>DATE</strong></li>
-                        <li class="list-group-item" id="tempDay1">TEMP:</li>
-                        <li class="list-group-item" id="windDay1">WIND:</li>
-                        <li class="list-group-item" id="humidityDay1">HUMIDITY:</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item" id="day-1"><strong>DATE</strong></li>
-                        <li class="list-group-item" id="tempDay1">TEMP:</li>
-                        <li class="list-group-item" id="windDay1">WIND:</li>
-                        <li class="list-group-item" id="humidityDay1">HUMIDITY:</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item" id="day-1"><strong>DATE</strong></li>
-                        <li class="list-group-item" id="tempDay1">TEMP:</li>
-                        <li class="list-group-item" id="windDay1">WIND:</li>
-                        <li class="list-group-item" id="humidityDay1">HUMIDITY:</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+<!--Grid with 2 columns
+Inside is a search bar taking up 1/4 of the available container space
+The other containers take up the rest of the space
+One container on top for #current takes up 3/4 space
+One container under that (divded into 5 sections) for the #extendedForecast
+Both of those will be created dynamically, but they need a container in order to appear
+We can use bootstrap to generate responsive containers
+here's the bones: -->
+    
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
