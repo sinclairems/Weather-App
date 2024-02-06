@@ -29,4 +29,9 @@ fetch(queryURL) // need to adjust app to accept user input to store in var city
     // var geoUrl = ""
 
     // Identify all ids from html
+    // main container: #weatherApp (probably won't need to use this one)
+    // search button id: #searchCity (to save past searches in local storage)
+    // local storage container: #localStorage (Display city)
+    // current weather container: #current (Display city, date, temp, wind(mph), humidity)
+    // extended forecast container: #extendedForecast (Display city, date, temp, wind(mph), humidity)
 

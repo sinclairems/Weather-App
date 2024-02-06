@@ -10,8 +10,6 @@
 </head>
 <body>
 
-<header id="dash">Weather Dashboard</header>
-
 <!--Grid with 2 columns
 Inside is a search bar taking up 1/4 of the available container space
 The other containers take up the rest of the space
@@ -21,6 +19,32 @@ Both of those will be created dynamically, but they need a container in order to
 We can use bootstrap to generate responsive containers
 here's the bones: -->
     
+    <header id="dashboard" class="dashboard">Weather Dashboard</header>
+
+<main id="weatherApp" class="container">
+    <div class="row">
+        <aside class="searchCity col-3">
+            <h2>Search for a City:</h2>
+                <input type="text" placeholder="Austin" id="city" class="inputBox" aria-label="Search">
+                <br>
+                <button type="submit" id="searchCity" class="searchButton">Search</button>
+                <br>
+            <container id="localStorage" class="localStorage">
+                <p>TEST</p>
+            </container>
+        </aside>
+<!--Contains current and extended forecast-->
+        <section id="results" class="current col-9">
+            <h2>Current Weather</h2>
+            <container id="current"></container>
+<!--Need 5 cols for extended forecast-->
+            <h3>5-Day Forecast</h3>
+            <container id="extendedForecast" class="extendedForecast 5 COLS GO HERE">TEST</container>
+        </section>
+    </div>
+</main>
+
+
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -30,14 +54,3 @@ here's the bones: -->
 
 
 
-<!--
-    Initial notes:
-    Base URL looks like: https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}
-
-    Strcture:
-    We'll need a bootstrap header
-    We'll need an aside search bar
-    We'll need a div/section to display the selected city's weather
-    We'll need a div/section to display the 5 day forecast
-
--->
