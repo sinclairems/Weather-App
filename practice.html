@@ -1,0 +1,200 @@
+<!--
+    This is from Mini-Project -- Needs jass.css to work
+    It was just a template that I modified, don't use it
+-->
+
+<div class="flex-row align-start align-stretch-md align-content-start align-content-stretch-md min-100-vh bg-primary">
+    <div class="col-12 col-md-3 bg-light p-3">
+        <h1 class="text-primary">Library of Congress Search Engine</h1>
+        <form id="search-form" class="mb-2">
+            <input id="search-input" class="form-input w-100" type="text" placeholder="Search!">
+            <select id="format-input" class="form-input w-100">
+                <option value="" disabled selected>Select a format...</option>
+                <option value="maps">Maps</option>
+                <option value="audio">Audio</option>
+                <option value="photos">Photos</option>
+                <option value="manuscripts">Manuscripts</option>
+                <option value="newspapers">Newspapers</option>
+                <option value="film-and-videos">Film and Videos</option>
+                <option value="notated-music">Notated Music</option>
+                <option value="websites">Websites</option>
+            </select>
+            <button class="btn btn-info btn-block">Search</button>
+        </form>
+
+        <a href="./index.html" class="btn btn-block btn-danger">&larr; Go back.</a>
+    </div>
+
+    <div class="col-12 col-md-9 p-3 text-light">
+        <h2>Showing results for <span id="result-text"></span></h2>
+        <div id="result-content"></div>
+    </div>
+</div>
+
+
+
+
+
+<!--
+    This one is pure BS ... but it doesn't look right and the search bar won't flex.
+-->
+    <div class="container">
+        <!-- Search City -->
+        <div class="row">
+            <div class="col-3">
+                <div class="container-fluid">
+                    <h1>Search for a City:</h1>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Austin" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-9">
+                <div class="container border border-dark my-3 p-5" id="currentSelection">
+                    <h1 id="city day-0">Kyle (today's date)</h1>
+                    <p id="temp">Temp:</p>
+                    <p id="wind">Wind:</p>
+                    <p id="humidity">Humidity:</p>
+                </div>
+    
+                <!--This container is for the 5-Day Forecast-->
+                <div class="container">
+                    <h2>5-Day Forecast</h2>
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 mb-5">
+                        <div class="col">
+                            <div class="card">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item" id="day-1"><strong>DATE</strong></li>
+                                    <li class="list-group-item" id="tempDay1">TEMP:</li>
+                                    <li class="list-group-item" id="windDay1">WIND:</li>
+                                    <li class="list-group-item" id="humidityDay1">HUMIDITY:</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item" id="day-1"><strong>DATE</strong></li>
+                                    <li class="list-group-item" id="tempDay1">TEMP:</li>
+                                    <li class="list-group-item" id="windDay1">WIND:</li>
+                                    <li class="list-group-item" id="humidityDay1">HUMIDITY:</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item" id="day-1"><strong>DATE</strong></li>
+                                    <li class="list-group-item" id="tempDay1">TEMP:</li>
+                                    <li class="list-group-item" id="windDay1">WIND:</li>
+                                    <li class="list-group-item" id="humidityDay1">HUMIDITY:</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item" id="day-1"><strong>DATE</strong></li>
+                                    <li class="list-group-item" id="tempDay1">TEMP:</li>
+                                    <li class="list-group-item" id="windDay1">WIND:</li>
+                                    <li class="list-group-item" id="humidityDay1">HUMIDITY:</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item" id="day-1"><strong>DATE</strong></li>
+                                    <li class="list-group-item" id="tempDay1">TEMP:</li>
+                                    <li class="list-group-item" id="windDay1">WIND:</li>
+                                    <li class="list-group-item" id="humidityDay1">HUMIDITY:</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <!--
+        MOST RECENT @ 4:51p -- This one is the modified version that looks good with 
+        jass.css. I'm worried about linking two style-sheets that essentially do the same thing
+        and it gets confusing. However, if it continues to work, go back to this. I might be 
+        spending too much time on index.
+    -->
+<div class="flex-row align-start align-stretch-md align-content-start align-content-stretch-md">
+    <div class="col-12 col-md-3 p-3">
+        <h1 class="text-primary">Search for a City</h1>
+        <form id="search-form" class="mb-2">
+            <input id="search-input" class="form-input w-100" type="text" placeholder="Austin">
+            <button class="btn btn-info btn-block">Search</button>
+        </form>
+    </div>
+    <div class="col-12 col-md-9 p-3">
+        <div class="container border border-dark my-3 p-3" id="currentSelection">
+            <h1 id="city day-0">Kyle (today's date)</h1>
+            <p id="temp">Temp:</p>
+            <p id="wind">Wind:</p>
+            <p id="humidity">Humidity:</p>
+        </div>
+        <div class="container">
+            <h2>5-Day Forecast</h2>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 mb-5">
+                <div class="col">
+                    <div class="card">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item" id="day-1"><strong>DATE</strong></li>
+                            <li class="list-group-item" id="tempDay1">TEMP:</li>
+                            <li class="list-group-item" id="windDay1">WIND:</li>
+                            <li class="list-group-item" id="humidityDay1">HUMIDITY:</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item" id="day-1"><strong>DATE</strong></li>
+                            <li class="list-group-item" id="tempDay1">TEMP:</li>
+                            <li class="list-group-item" id="windDay1">WIND:</li>
+                            <li class="list-group-item" id="humidityDay1">HUMIDITY:</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item" id="day-1"><strong>DATE</strong></li>
+                            <li class="list-group-item" id="tempDay1">TEMP:</li>
+                            <li class="list-group-item" id="windDay1">WIND:</li>
+                            <li class="list-group-item" id="humidityDay1">HUMIDITY:</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item" id="day-1"><strong>DATE</strong></li>
+                            <li class="list-group-item" id="tempDay1">TEMP:</li>
+                            <li class="list-group-item" id="windDay1">WIND:</li>
+                            <li class="list-group-item" id="humidityDay1">HUMIDITY:</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item" id="day-1"><strong>DATE</strong></li>
+                            <li class="list-group-item" id="tempDay1">TEMP:</li>
+                            <li class="list-group-item" id="windDay1">WIND:</li>
+                            <li class="list-group-item" id="humidityDay1">HUMIDITY:</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
