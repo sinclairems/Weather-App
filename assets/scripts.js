@@ -1,3 +1,17 @@
+// Here's where I left off:
+// https://openweathermap.org/forecast5
+// https://openweathermap.org/api/geocoding-api
+// https://getbootstrap.com/docs/5.0/components/card/
+// https://github.com/jfisher396/weather-dashboard?tab=readme-ov-file
+// https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+// https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Promises
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON
+// https://developer.mozilla.org/en-US/docs/Web/API/URL
+
+
+
+
+
 var searchBtn = document.getElementById("searchBtn"); // for click event
 var searchInput = document.getElementById("searchInput") // user's city input
 var pastResults = document.getElementById("pastResults") // local storage to store and render past results
